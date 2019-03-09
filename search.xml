@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[第二条测试]]></title>
-    <url>%2F2019%2F03%2F09%2Fsecond%2F</url>
-    <content type="text"><![CDATA[你好，我是梅杰。]]></content>
+    <title><![CDATA[关于pr安装失败]]></title>
+    <url>%2F2019%2F03%2F09%2Fpr_delete%2F</url>
+    <content type="text"><![CDATA[在安装pr的时候总是有许多的问题，这很正常。话不多说，首先拿到安装包后我们先断开网络连接，避免要登录adobe账号，再打开我的电脑，进c盘如图所示的文件目录下，删除里面的几个文件，然后选好安装的位置，开始安装。然后就可以使用了。]]></content>
   </entry>
   <entry>
-    <title><![CDATA[Test]]></title>
+    <title><![CDATA[我的第一篇博客]]></title>
     <url>%2F2019%2F03%2F09%2Ffirst%2F</url>
-    <content type="text"><![CDATA[这是测试]]></content>
+    <content type="text"><![CDATA[mango仓库blog开通，blog采用hexo+nodejs完成，基于开源更改，仅作为学习娱乐，若有侵权联系mj981022@163.com.]]></content>
   </entry>
 </search>
