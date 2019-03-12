@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[递归函数常见问题]]></title>
+    <url>%2F2019%2F03%2F12%2Fdigui%2F</url>
+    <content type="text"><![CDATA[什么是递归递归是一个函数不断调用自身的值来求解的一个过程，迭代是在一块代码区里进行自身值的调用 实例 今天看到一个递归的例子，代码如图所示: 求输出结果，其实这是一个很基础的知识点，但是往往容易被我们忽略，图中程序是一个典型的递归函数，其输出结果为fedcba，将字符”abcdef”倒序输出了。或许你会比较奇怪，为什么会出现这样的结果呢？为了方便理解，，我在这个基础上重新写了一个demo来观察其执行原理。如图所示 a初始值为1，在函数A里，每执行一次就增加1，在满足第一个if条件前提下，进行输出a值，并且进行递归，递归之后还有一个if语句进行输出a值，最终执行结果如图所示: 先是顺序的输出2,3…..8，这没什么疑问，因为a+1要&lt;10，所以a最大只能为8，但是最后还逆序输出了8,7…….2。就和第一个例子的输出结果是一样的，都是逆序了。这是因为，递归的设计原理就是利用了栈的特性，先进后出。图中函数A在满足了第一个if之后，紧接着就开始了函数递归，此时是将每一次执行时局部变量值压入栈内，一直到最后不满足递归的条件了，也就是a+1&gt;=10了（a=9）时，递归结束，开始执行递归之后的代码块，而进行弹栈，依次输出a值（递归多少次就执行多少次），因为栈是先进后出，所以最终输出结果是8,7,6,5,4,3,2。相同道理，第一个图中的代码是将指针p指向字符串”abcdef”，也就是一开始指针指向字符串的第一个字符’a’，在函数fun里，t=p++;，因为++的优先级大于,所以相当于是p指针进行了自加（因为p++是执行完之后才变更，而++p是执行前变更），也就是t一开始等于’a’，满足p不等于”\0”之后进入fun函数递归，一直到p等于”\0”之后，结束递归，此间假如写一个输出t的语句，对t的输出应为:abcdef。 结束递归后，开始进行对t是否等于”\0”进行判断，如果不相等，则输出t，因为当*p=”\0”的时候，此时t应该是等于’f’，进行取栈，依次输出”fedcba”。 总之，递归里面含有递归的”先进后出”的特性。 ps:在printf函数里，对变量的计算是从右至左依次计算，计算完就压入栈，最后依次取出输出，所以printf函数也是利用了栈的特性。]]></content>
+      <categories>
+        <category>递归</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo图片托管-微博图床]]></title>
+    <url>%2F2019%2F03%2F12%2Ftuchuang%2F</url>
+    <content type="text"><![CDATA[为什么要使用图床 在使用hexo用md写文章时，能插入点图片当然是最好的，这样显得更生动点，如果将图片全部放到项目的指定文件夹里，利用相对路径来引用的话，项目包日积月累一定会非常地大，因为我买的blog一般是用了github的page服务，这样肯定会造成打开blog会变得非常卡顿。所以最好的办法是使用外链，即用网络连接的方式显示图片，于是图床应运而生。 为什么选择微博 国内有不少的云存储服务，像腾讯微博七牛等等，都是能提供稳定服务的大厂，但是腾讯需要付费，七牛需要实名认证，于是我选择了微博作为我的图床，登录微博然后打开相册，进入了微相册可以新建一个专辑设置为仅私人可见，避免不必要麻烦，然后就可以将本地图片上传至我买的相册专辑了，然后点击图片，点击查看大图，鼠标右键，复制图片连接（如果不查看大图图片是压缩模式，模糊不清），然后就可以在md里进行 src=”连接”来显示了，美滋滋~ &gt;]]></content>
+      <categories>
+        <category>图片</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo next开启动态效果]]></title>
+    <url>%2F2019%2F03%2F12%2Fhexo_next_cavans%2F</url>
+    <content type="text"><![CDATA[介绍Next作为hexo最受欢迎之一的主题，其实也有很多人性化的设置，比如说baidushare和busuanzi，今天要介绍的是cavans动态效果，打开next的_config.yml配置文件 将false改成ture，里面有几个属性，一个是线条一个是球，自己可以慢慢试一下]]></content>
+      <categories>
+        <category>Next</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[heox部署到码云giitee和无法访问二级目录文件]]></title>
+    <url>%2F2019%2F03%2F12%2Fgitee_page%2F</url>
+    <content type="text"><![CDATA[为什么要部署到码云上 之前已经说了如何部署自己的hexo项目到github上并且使用github的page服务，但是毕竟github服务器在国外，访问速度肯定是比较慢的了，那么今天就来说说怎么部署自己的hexo项目到码云gitee上。 怎么部署？ 一样的，首先注册一个码云账号，填写你的uername，最后正经一点，作为你的域名。然后像操作github一样，创建一个仓库，注意：如果想让你的hexo blog能用https://username.gitee.io 的方式进行访问，那就必须要求仓库的名字和你的uername一致，否则就只能用二级目录格式的url进行访问，所以建议大家将仓库取名和username一致。完成之后在hexo项目的根目录里打开配置文件_config.yml，如图所示配置好rope然后就可以用hexo clean &amp;&amp;hexo g &amp;&amp; hexo d命令来说呢过程html文件和push代码了，在上传时，我这个肯定是需要输入两次用户名和米密码的，一个是github的，一个是码云的，因为我没有配置ssh免密连接，有兴趣可以去了解一下ssh免密连接。 常见问题 如何创建一个首页访问地址不带二级目录的 pages，如ipvb.gitee.io？ 答：如果你想你的 pages 首页访问地址不带二级目录，如ipvb.gitee.io，你需要建立一个与自己个性地址同名的仓库，如 https://gitee.com/ipvb 这个用户，想要创建一个自己的站点，但不想以子目录的方式访问，想以ipvb.gitee.io直接访问，那么他就可以创建一个名字为ipvb的仓库 https://gitee.com/ipvb/ipvb 部署完成后，就可以以 https://ipvb.gitee.io 进行访问了。 当要部署的项目与自己的个性地址不一致时，部署完成后存在一些资源访问404？ 答：当需要部署的仓库和自己的个性地址不一致时，如：https://gitee.com/ipvb/blog ，生成的pages url 为 https://ipvb.gitee.io/blog ，而访问的资源404，如 https://ipvb.gitee.io/style.css 。这是因为相应配置文件的相对路径存在问题导致的，生成的资源 url 应该为 https://ipvb.gitee.io/blog/style.css 才对。对于不同的静态资源生成器，配置如下： 具体见官网：https://gitee.com/help/articles/4136#article-header0]]></content>
+      <categories>
+        <category>码云gitee</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[新版win10进pe蓝屏问题]]></title>
     <url>%2F2019%2F03%2F11%2Fwepe%2F</url>
     <content type="text"><![CDATA[笔者是一个装系统老手了，用的最多的就是u盘pe。但是有一次在给一个学弟装系统时发现用u启动和其他启动盘进pe，电脑直接蓝屏，如下图所示尝试多次也没办法，包括什么更改硬盘格式，但有的只有一种格式，根本没办法更改。然后我尝试了wepe的win10pe系统进wepe官网下载wepe win10制作包 然后安装，选择u盘制作，如图所示 选择制作的u盘和安装方式以及其他设置 然后等安装 完成 插入u盘，重启电脑，长按esc或f12键进启动项，选择u盘，就ok了罗列常见电脑型号对应的启动项键]]></content>
