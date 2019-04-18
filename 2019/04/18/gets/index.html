@@ -80,17 +80,19 @@
 
 
 
-<meta name="description" content="进入注册表编辑器，依次打开HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager，找到“PendingFileRenameOperations”值删掉，即可">
+<meta name="description" content="例子这几天一直在看信息安全方面的东西，看到一个例子，设计伪代码如下： 问：当用户输入时调用gets函数，只要满足什么样的条件就可以绕开验证？ 解析答案是当用户通过gets函数用户口令的时候，只需要输入长度为24的字符串，且前12个字符和后12个字符完全相等的时候就能绕开口令验证这是因为，gets函数在输入时，并不会检测输入的内容会不会超出限制的长度，在分配空间的时候，两个定义的数组是连续的两个12">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQLServer2008安装一直显示重启计算机">
-<meta property="og:url" content="http://yoursite.com/2019/03/10/sqlserver2008_reboot/index.html">
+<meta property="og:title" content="gets函数关于缓冲区溢出风险">
+<meta property="og:url" content="http://yoursite.com/2019/04/18/gets/index.html">
 <meta property="og:site_name" content="mango仓库">
-<meta property="og:description" content="进入注册表编辑器，依次打开HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager，找到“PendingFileRenameOperations”值删掉，即可">
+<meta property="og:description" content="例子这几天一直在看信息安全方面的东西，看到一个例子，设计伪代码如下： 问：当用户输入时调用gets函数，只要满足什么样的条件就可以绕开验证？ 解析答案是当用户通过gets函数用户口令的时候，只需要输入长度为24的字符串，且前12个字符和后12个字符完全相等的时候就能绕开口令验证这是因为，gets函数在输入时，并不会检测输入的内容会不会超出限制的长度，在分配空间的时候，两个定义的数组是连续的两个12">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-10T05:41:51.675Z">
+<meta property="og:image" content="http://wx1.sinaimg.cn/large/005GUiUygy1g271k0mm71j30me0ni74r.jpg">
+<meta property="og:updated_time" content="2019-04-18T12:12:50.783Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SQLServer2008安装一直显示重启计算机">
-<meta name="twitter:description" content="进入注册表编辑器，依次打开HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager，找到“PendingFileRenameOperations”值删掉，即可">
+<meta name="twitter:title" content="gets函数关于缓冲区溢出风险">
+<meta name="twitter:description" content="例子这几天一直在看信息安全方面的东西，看到一个例子，设计伪代码如下： 问：当用户输入时调用gets函数，只要满足什么样的条件就可以绕开验证？ 解析答案是当用户通过gets函数用户口令的时候，只需要输入长度为24的字符串，且前12个字符和后12个字符完全相等的时候就能绕开口令验证这是因为，gets函数在输入时，并不会检测输入的内容会不会超出限制的长度，在分配空间的时候，两个定义的数组是连续的两个12">
+<meta name="twitter:image" content="http://wx1.sinaimg.cn/large/005GUiUygy1g271k0mm71j30me0ni74r.jpg">
 
 
 
@@ -124,7 +126,7 @@
 
 
 
-  <title>SQLServer2008安装一直显示重启计算机 | mango仓库</title>
+  <title>gets函数关于缓冲区溢出风险 | mango仓库</title>
   
 
 
@@ -275,7 +277,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/10/sqlserver2008_reboot/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/18/gets/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mangomj">
@@ -292,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SQLServer2008安装一直显示重启计算机</h1>
+          <h1 class="post-title" itemprop="name headline">gets函数关于缓冲区溢出风险</h1>
         
 
         <div class="post-meta">
@@ -304,8 +306,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-10T13:41:51+08:00">
-                2019-03-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-18T20:14:39+08:00">
+                2019-04-18
               </time>
             
 
@@ -327,8 +329,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Sqlserver2008/" itemprop="url" rel="index">
-                    <span itemprop="name">Sqlserver2008</span>
+                  <a href="/categories/缓冲区溢出/" itemprop="url" rel="index">
+                    <span itemprop="name">缓冲区溢出</span>
                   </a>
                 </span>
 
@@ -345,8 +347,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/10/sqlserver2008_reboot/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/10/sqlserver2008_reboot/" itemprop="commentCount"></span>
+                <a href="/2019/04/18/gets/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/18/gets/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -379,9 +381,11 @@
       
 
       
-        <blockquote>
-</blockquote>
-<p>进入注册表编辑器，依次打开HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager，找到“PendingFileRenameOperations”值<br>删掉，即可</p>
+        <h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p>这几天一直在看信息安全方面的东西，看到一个例子，设计伪代码如下：<br><img src="http://wx1.sinaimg.cn/large/005GUiUygy1g271k0mm71j30me0ni74r.jpg"></p>
+<p>问：当用户输入时调用gets函数，只要满足什么样的条件就可以绕开验证？</p>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><pre><code>答案是当用户通过gets函数用户口令的时候，只需要输入长度为24的字符串，且前12个字符和后12个字符完全相等的时候就能绕开口令验证这是因为，gets函数在输入时，并不会检测输入的内容会不会超出限制的长度，在分配空间的时候，两个定义的数组是连续的两个12个字符大小的空间，所以当输入上述的字符串后，就会出现缓冲区溢出，而覆盖先前的内容，导致在读取两个数组中的内容时，是相同的两个字符串。
+</code></pre><p><strong>防范</strong></p>
+<p>==由于gets()不检查字符串string的大小，必须遇到换行符或文件结尾才会结束输入，因此容易造成缓存溢出的安全性问题，导致程序崩溃，可以使用fgets()代替  == </p>
 
       
     </div>
@@ -406,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/10/hard_disk/" rel="next" title="装机检测不到硬盘和checking media">
-                <i class="fa fa-chevron-left"></i> 装机检测不到硬盘和checking media
+              <a href="/2019/03/12/digui/" rel="next" title="递归函数常见问题">
+                <i class="fa fa-chevron-left"></i> 递归函数常见问题
               </a>
             
           </div>
@@ -415,10 +419,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/11/JSP_charset-error/" rel="prev" title="Jsp页面传递数据中文乱码">
-                Jsp页面传递数据中文乱码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -511,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -563,6 +572,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#例子"><span class="nav-number">1.</span> <span class="nav-text">例子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解析"><span class="nav-number">1.1.</span> <span class="nav-text">解析</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
